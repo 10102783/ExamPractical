@@ -1,0 +1,24 @@
+﻿@model ExamPractical.Models.Student
+
+@{
+    ViewData["Title"] = "Student Details";
+}
+
+<h2>Student Details</h2>
+
+<div>
+    <label>Name:</label>
+    <div>@Model.Name</div>
+</div>
+<div>
+    <label>Age:</label>
+    <div>@Model.Age</div>
+</div>
+<div>
+    <label>Email:</label>
+    <div>@Model.Email</div>
+</div>
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</p>

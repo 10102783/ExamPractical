@@ -1,0 +1,21 @@
+﻿@model ExamPractical.Models.Lecturer
+
+@{
+    ViewData["Title"] = "Lecturer Details";
+}
+
+<h2>Lecturer Details</h2>
+
+<div>
+    <label>Name:</label>
+    <div>@Model.Name</div>
+</div>
+<div>
+    <label>Department:</label>
+    <div>@Model.Department</div>
+</div>
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</p>
+

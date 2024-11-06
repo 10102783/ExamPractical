@@ -1,0 +1,24 @@
+﻿@model ExamPractical.Models.Lecturer
+
+@{
+    ViewData["Title"] = "Delete Lecturer";
+}
+
+<h2>Delete Lecturer</h2>
+
+<h4>Are you sure you want to delete this lecturer?</h4>
+<hr />
+<div class="form-group">
+    <label>Name:</label>
+    <div>@Model.Name</div>
+</div>
+<div class="form-group">
+    <label>Department:</label>
+    <div>@Model.Department</div>
+</div>
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
